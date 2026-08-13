@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(246, 246, 217, 0.542);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5E6CA;
+    border-bottom: 0.0625rem solid #eeeeee;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.065);
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1.25rem 3.125rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+}
+
+.logo-image{
+    width: 5rem;
+}
+
+.logo-name-and-tagline{
+    line-height: 35px;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(162, 0, 33);
+}
+
+.name span{
+    font-weight: bold;
+}
+
+.tagline{
+    color: rgb(162, 0, 33);
+    font-size: 1rem;
+    padding-left: 3.75rem;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.active{
+    color: rgb(202, 1, 41);
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.dormant{
+    font-size: 1.75rem;
+    color: #e1af84;
+}
+
+.dormant:hover{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.eligibility-container{
+    margin: 2.5rem auto;
+    padding: 1.25rem;
+}
+
+.eligibility-container h1{
+    font-size: 2.5rem;
+}
+
+.eligibilty-and-faq-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3.125rem;
+    margin-top: 1.875rem;
+}
+
+#check-eligibility1{
+    max-width: 800px;
+}
+
+#check-eligibility1 h2{
+    font-family: Lora;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.eligibility-table table{
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1.8px solid #4f4f4f;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 500px;
+    text-align: center;
+}
+
+.eligibility-table table tr th{
+    background-color: rgb(181, 14, 48);
+    color: #F5E6CA;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    padding: 10px;
+}
+
+.needs td{
+    background-color: #F5E6CA;
+    color: rgb(181, 14, 48);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.very-needed1 td{
+    font-family: Outfit;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.very-needed2 td{
+    font-family: Outfit;
+    font-weight: 500;
+    background-color: #f5e6ca57;
+    padding: 20px;
+}
+
+.frequently-asked-questions{
+    max-width: 550px;
+}
+
+.frequently-asked-questions h2{
+    font-family: Lora;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.faq-container{
+    width: 100%;
+}
+
+.answer, .question{
+    padding: 5px;
+    text-align: center;
+    background-color: #f5e6ca57;
+    border: solid 1.5px #c3c3c3;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.question{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.answer{
+    padding: 50px;
+    display: none;
+    font-family: Outfit;
+    font-weight: 400;
+}
+
+.adjust{
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.adjust-2{
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.adjust-3{
+    padding-left: 35px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+
+@media screen and (max-width: 1439px) {
+    .eligibility-container h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    #check-eligibility, .frequently-asked-questions {
+        max-width: 48%; /* Prevents horizontal collisions on smaller laptop screens */
+    }
+}
+
+/* 📟 MID-RANGE WIDESCREENS & TABLET-LANDSCAPE (iPad Pro, Nest Hub, 769px - 1120px)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 769px) and (max-width: 1120px) {
+    .eligibilty-and-faq-section {
+        flex-direction: column !important; /* Stacks sections to eliminate tight text squishing */
+        align-items: center !important;
+        gap: 3.5rem !important;
+        padding: 1.25rem 2rem !important;
+    }
+
+    #check-eligibility, .frequently-asked-questions {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .eligibility-table table {
+        max-width: 650px !important; /* Expands table naturally to utilize space cleanly */
+        margin: 0 auto !important;
+    }
+
+    .faq-container {
+        max-width: 650px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* 9️⃣ TABLETS & MEDIUM PORTRAIT SCREENS (768px - 1023px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1023px) {
+    header {
+        padding: 1.25rem 2rem;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        padding-left: 2rem;
+    }
+
+    .nav-container {
+        gap: 2rem;
+    }
+
+    .active, .dormant, .dormant:hover {
+        font-size: 1.4rem;
+    }
+}
+
+/* 📱 SMALLER TABLETS & LARGE MOBILE PHONES (481px - 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1rem;
+        position: static; /* Disables sticky positioning on touch viewports for optimized browsing space */
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-name-and-tagline {
+        line-height: 28px;
+    }
+
+    .tagline {
+        padding-left: 0;
+    }
+
+    .nav-container {
+        gap: 1.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .active, .dormant, .dormant:hover {
+        font-size: 1.2rem;
+    }
+
+    .eligibility-container {
+        margin: 1rem auto;
+    }
+
+    .eligibility-container h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .eligibilty-and-faq-section {
+        flex-direction: column !important;
+        padding: 1rem;
+        gap: 2.5rem;
+    }
+
+    #check-eligibility, .frequently-asked-questions {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Enables safe horizontal swipe-scrolling for the table container on mobile views */
+    #check-eligibility {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .eligibility-table table {
+        width: 100% !important;
+        min-width: 450px; /* Maintains readability without columns getting completely squashed */
+    }
+
+    #check-eligibility h2, .frequently-asked-questions h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    /* Standardizes outer borders and forces all FAQ question bars to align perfectly */
+    .question {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        text-align: left !important;
+    }
+
+    /* Overrides internal padding classes to align text values identically on the left */
+    .adjust, .adjust-2, .adjust-3 {
+        padding-left: 1.25rem !important;
+        padding-right: 1rem !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        font-size: 1.1rem !important;
+    }
+
+    .answer {
+        padding: 1.5rem !important;
+        text-align: left !important;
+    }
+}
+
+/* 📲 SMALL MOBILE PHONES (320px - 480px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 2.1rem;
+    }
+
+    .logo-image {
+        width: 4rem;
+    }
+
+    .eligibility-container h1 {
+        font-size: 1.4rem;
+    }
+
+    #check-eligibility h2, .frequently-asked-questions h2 {
+        font-size: 1.35rem;
+    }
+
+    .eligibility-table table tr th {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+
+    .needs td {
+        font-size: 1.1rem;
+        padding: 8px;
+    }
+
+    .very-needed1 td, .very-needed2 td {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .adjust, .adjust-2, .adjust-3 {
+        font-size: 0.95rem !important;
+        padding-left: 1rem !important;
+    }
+
+    .answer {
+        font-size: 0.95rem;
+        padding: 1.25rem 1rem !important;
+    }
+}

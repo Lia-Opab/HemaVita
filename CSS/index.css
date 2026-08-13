@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(246, 246, 217, 0.542);
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5E6CA;
+    border-bottom: 0.0925rem solid #eeeeee;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.065);
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1.25rem 3.125rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+}
+
+.logo-image{
+    width: 5rem;
+    height: auto;
+}
+
+.logo-name-and-tagline{
+    line-height: 35px;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(162, 0, 33);
+}
+
+.name span{
+    font-weight: bold;
+}
+
+.tagline{
+    color: rgb(162, 0, 33);
+    font-size: 1rem;
+    padding-left: 3.75rem;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.active{
+    color: rgb(202, 1, 41);
+    font-weight: bold;
+    font-size: 1.75rem;
+    text-decoration: underline;
+}
+
+.dormant{
+    font-size: 1.75rem;
+    color: #e1af84;
+}
+
+.dormant:hover{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.hero-section{
+    width: 100%;
+    /* Takes up 75% of the screen height under the header, since 1vh which is 1 viewport height = 1% */
+    height: 75vh;
+    /* Hides any video overflowing out of bounds */
+    overflow: hidden;
+    position: relative;
+}
+
+.track{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* Allows horizontal sliding */
+    overflow-x: auto; 
+    /* Hides the default scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* Snaps smoothly to the next video */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+/* Hides the default scrollbar across different browsers */
+.track::-webkit-scrollbar{
+    display: none;
+}
+
+.slide{
+    flex: 0 0 100%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.slide video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.info-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 3.125rem;
+    margin-top: 1.875rem;
+    gap: 2rem;
+}
+
+.info-div1 h1{
+    font-size: 4.5rem;
+    font-family: Lora;
+    font-weight: 900;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.info-div1 p{
+    font-size: 1.2rem;
+    max-width: 800px;
+    font-family: Poppins;
+    color: #555;
+}
+
+.info-div2{
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.find-a-center-near-you{
+    color: rgb(181, 16, 51);
+    background-color: #F5E6CA;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.95rem 1.1rem;
+    width: 300px;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.find-a-center-near-you:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 7px 4px rgba(0, 0, 0, 0.065);
+    color: #F5E6CA;
+    background-color: rgb(162, 16, 45);
+    font-weight: 400;
+}
+
+.become-a-donor{
+    color: rgb(181, 16, 51);
+    background-color: #F5E6CA;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    width: 230px;
+    font-weight: 600;
+    padding: 0.95rem 1.1rem;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.become-a-donor:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 7px 4px rgba(0, 0, 0, 0.065);
+    background-color: rgb(162, 16, 45);
+    font-weight: 400;
+    color: #F5E6CA;
+}
+
+.process{
+    background-color: #E8D8C8;
+    padding: 4rem 1rem;
+    border-radius: 6px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.register{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#register-icon{
+    font-size: 4rem;
+    color: rgb(162, 16, 45);
+}
+
+.register p{
+    font-size: 1.5rem;
+    font-family: Outfit;
+}
+
+.donate{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#donate-icon{
+    font-size: 4rem;
+    color: rgb(162, 16, 45);
+}
+
+.donate p{
+    font-size: 1.5rem;
+    font-family: Outfit;
+}
+
+.recover{
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#recover-icon{
+    font-size: 4rem;
+    color: rgb(162, 16, 45);
+}
+
+.recover p{
+    font-size: 1.5rem;
+    font-family: Outfit;
+}
+
+.urgent-section{
+    background-color: #f5e6ca41;
+    margin-top: 0.625rem;
+    padding: 5rem 3.125rem;
+}
+
+.urgent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.urgent h1{
+    font-family: Lora;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.urgent-container button:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 6px 5px rgba(0, 0, 0, 0.065);
+    border: none;
+    background-color: #8B0000; 
+    color: #E8D8C8;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.urgent-container button:hover p span {
+    color: #E8D8C8;
+}
+
+.urgent-row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 4.125rem;
+    width: 100%;
+}
+
+.urgent-row1 button p span{
+    color: black;
+}
+
+#urgent-icon{
+    font-size: 4rem;
+}
+
+.urgent-row2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 4.125rem;
+    width: 100%;
+}
+
+.urgent-row2 button p span{
+    color: black;
+}
+
+#urgent-icon{
+    font-size: 4rem;
+}
+
+.urgent-row3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 4.125rem;
+    width: 100%;
+}
+
+.urgent-row3 button p span{
+    color: black;
+}
+
+#urgent-icon{
+    font-size: 4rem;
+}
+
+.A-positive, .O-negative, .AB-positive {
+    display: inline-flex;
+    align-items: center;
+    color: rgb(162, 16, 45);
+    background-color: #E8D8C8;
+    font-size: 2rem;
+    font-family: Outfit;
+    font-weight: 500;
+    gap: 15px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    width: 400px;
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 1366px) {
+    /* Hard control to stop elements from bleeding layout width over the screen edge */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+
+    /* 🎬 MOVIE SLIDER CONTAINER SAFETY */
+    .hero-section, .track, .slide {
+        max-width: 100vw !important;
+    }
+
+    /* 🧱 INFO SECTION TABLET RE-ALIGNMENT
+       Flips layout symmetrically so your text and process card don't squash side-by-side */
+    .info-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 3rem 2rem !important;
+        gap: 3rem !important;
+    }
+
+    .info-div1 h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem) !important;
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+
+    .info-div1 p {
+        max-width: 100% !important;
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .info-div2 {
+        justify-content: center !important;
+        margin-top: 2rem;
+    }
+
+    /* Scales down the process block cleanly for iPad viewport distributions */
+    .process {
+        max-width: 500px !important;
+        width: 100% !important;
+        margin: 0 auto;
+    }
+
+    /* 🩸 KILL THE GAP BLOWOUT: Stops the 400px button arrays from stretching past tablet walls */
+    .urgent-container {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .urgent-row1, .urgent-row2, .urgent-row3 {
+        flex-wrap: wrap !important; /* Forces buttons to wrap nicely onto a new line if they run out of space */
+        justify-content: center !important;
+        gap: 1.5rem !important; /* Lowers your massive 4.125rem gap so it fits inside iPad screens */
+        width: 100% !important;
+        margin-top: 1.5rem !important;
+    }
+
+    /* Dynamically resizes the hardcoded 400px buttons so they accommodate tablet boundaries */
+    .A-positive, .O-negative, .AB-positive {
+        width: 100% !important;
+        max-width: 320px !important; /* Fits comfortably side-by-side on iPad Pro/Air, wraps safely on Mini */
+        font-size: 1.5rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+}
+
+/* 📱 LARGE PHONES & PORTRAIT SMARTPHONES (481px - 767px) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        padding: 1.25rem 1rem !important;
+        position: static !important;
+    }
+    .logo-container {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .tagline {
+        padding-left: 0 !important;
+    }
+    .nav-container {
+        gap: 1.5rem !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .active, .dormant {
+        font-size: 1.3rem !important;
+    }
+    .info-div2 {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .find-a-center-near-you, .become-a-donor {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+    .urgent-row1, .urgent-row2, .urgent-row3 {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+}
+
+/* 📲 SMARTPHONES & IPHONE SE (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        height: 45vh !important;
+    }
+    .name {
+        font-size: 2rem !important;
+    }
+    .logo-image {
+        width: 3.8rem !important;
+    }
+    .nav-container {
+        gap: 1rem !important;
+    }
+    .active, .dormant {
+        font-size: 1.05rem !important;
+    }
+    .info-div1 h1 {
+        font-size: 2rem !important;
+    }
+    .urgent h1 {
+        font-size: 1.8rem !important;
+    }
+    .A-positive, .O-negative, .AB-positive {
+        max-width: 280px !important;
+        font-size: 1.3rem !important;
+    }
+    #urgent-icon {
+        font-size: 2.3rem !important;
+    }
+}
